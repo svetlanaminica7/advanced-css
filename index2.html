@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            width: 400px;
+            margin: 0 auto;
+            background-color: #050210;
+        }
+
+        #circle {
+            display: block;
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            background: linear-gradient(to right, #fb5dad 0%, #55fb9f 50%, #b97aff 100%);
+            animation-name: my-animation;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-direction: normal;
+            transition-timing-function: linear;
+            z-index: 10;
+            position: absolute;
+        }
+
+        #circle-glow {
+            display: block;
+            border-radius: 100%;
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+            background: linear-gradient(to right, #fb5dad 0%, #55fb9f 50%, #b97aff 100%);
+            animation-name: my-animation;
+            animation-duration: 1.5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-direction: normal;
+            transition-timing-function: linear;
+            position: absolute;
+            filter: blur(50px);
+            z-index: 0;
+        }
+
+      
+
+        #circle:after {
+            content: "";
+            display: block;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            top: 25px;
+            left: 25px;
+            border-radius: 100%;
+            background: #050210;
+           
+        }
+
+        @keyframes my-animation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+
+        }
+
+        #circle-pulse{
+            display: block;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            margin: 50px auto;
+            top: 75px;
+            left: -50px;
+            border-radius: 100%;
+            background: #140d2d;
+            transform: scale(0);
+            animation-name: my-scale-animation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-direction: normal;
+            transition-timing-function: linear;
+            z-index: 11;
+        }
+
+        #circle-pulse-2{
+            display: block;
+            width: 250px;
+            height: 250px;
+            position: relative;
+            margin: 50px auto;
+            top: -225px;
+            left: -50px;
+            border-radius: 100%;
+            background: #6e5cad;
+            transform: scale(0);
+            animation-name: my-scale-animation;
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: none;
+            animation-direction: normal;
+            transition-timing-function: linear;
+            z-index: 12;
+        }
+        
+
+        @keyframes my-scale-animation {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="circle"></div>
+    <div id="circle-glow"></div>
+    <div id="circle-pulse"></div>
+    <div id="circle-pulse-2"></div>
+</body>
+
+</html>
