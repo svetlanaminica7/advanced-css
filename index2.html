@@ -19,12 +19,14 @@
             height: 300px;
             margin: 50px auto;
             background: linear-gradient(to right, #fb5dad 0%, #55fb9f 50%, #b97aff 100%);
-            animation-name: my-animation;
+            animation: my-animation 2s infinite linear;
+            /*animation-name: my-animation;
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
             animation-fill-mode: none;
             animation-direction: normal;
             transition-timing-function: linear;
+            */
             z-index: 10;
             position: absolute;
         }
@@ -36,12 +38,14 @@
             height: 300px;
             margin: 50px auto;
             background: linear-gradient(to right, #fb5dad 0%, #55fb9f 50%, #b97aff 100%);
-            animation-name: my-animation;
+            animation: my-animation 2s infinite linear;
+            /*animation-name: my-animation;
             animation-duration: 1.5s;
             animation-iteration-count: infinite;
             animation-fill-mode: none;
             animation-direction: normal;
             transition-timing-function: linear;
+            */
             position: absolute;
             filter: blur(50px);
             z-index: 0;
@@ -83,12 +87,15 @@
             border-radius: 100%;
             background: #140d2d;
             transform: scale(0);
-            animation-name: my-scale-animation;
+            opacity : 0.1;
+            animation: my-scale-animation 2s infinite linear;
+            /*animation-name: my-scale-animation;
             animation-duration: 2s;
             animation-iteration-count: infinite;
             animation-fill-mode: none;
             animation-direction: normal;
             transition-timing-function: linear;
+            */
             z-index: 11;
         }
 
@@ -101,27 +108,68 @@
             top: -225px;
             left: -50px;
             border-radius: 100%;
-            background: #6e5cad;
+            background: #140d2d;
             transform: scale(0);
-            animation-name: my-scale-animation;
+            opacity : 0.1;
+            animation: my-scale-animation-2 2s infinite linear;
+            /*animation-name: my-scale-animation;
             animation-duration: 2s;
             animation-delay: 2s;
             animation-iteration-count: infinite;
             animation-fill-mode: none;
             animation-direction: normal;
             transition-timing-function: linear;
+            */
             z-index: 12;
         }
         
 
         @keyframes my-scale-animation {
-            from {
+            0% {
                 transform: scale(0);
+                opacity : 0.1;
             }
-            to {
+            25% {
+                transform: scale(0.5);
+                opacity :1;
+            }
+            50% {
                 transform: scale(1);
+                opacity :0.1;
+            }
+            51% {
+                transform: scale(0);
+                opacity :0.1;
+            }
+            100% {
+                
+                opacity :0;
             }
         }
+        @keyframes my-scale-animation-2 {
+            0% {
+                transform: scale(0);
+                opacity : 0.1;
+            }
+            50% {
+                transform: scale(0);
+                opacity :0.1;
+            }
+            51% {
+                transform: scale(0);
+                opacity :0.1;
+            }
+            75% {
+                transform: scale(0.5);
+                opacity :1;
+            }
+            100% {
+                transform: scale(1);
+                opacity :0.1;
+            }
+        }
+
+        
 
     </style>
 </head>
