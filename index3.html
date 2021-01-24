@@ -18,31 +18,37 @@
         grid-auto-flow: row;
         grid-template-columns: repeat(5, 1fr);
         gap: 10px;
+        row-gap: 40px;
         justify-items: center;
     }
 
-    .container>div {
-        background-color: blue;
+    .image {
+        background-color: rgba(0,0,255,0.55);
         border: solid 1px rgba(81, 81, 219, 0.5);
-        height: 120px;
+        height: 90px;
         width: 120px;
 
-        border-radius: 10px;
-
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;    
         color: black;
-        /*background: linear-gradient(180deg, rgb(0,0,255) 65%, white 35%);*/
-
-        /*background: url("placeholder-image.png") center center no-repeat,linear-gradient(180deg, blue 65%, white 35%);*/
-        /*text-align: bottom;
         display: flex;
-        align-items: flex-end;*/
-
-
+        align-items: flex-end;
         background-image: url("placeholder-image.png");
         background-size: 100%;
         background-repeat: no-repeat;
-
     }
+
+    .bottom {
+        background-color: rgb(238, 243, 245);
+        text-align: center;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    .text{
+        padding: 35px;
+    }
+
 
     @media screen and (max-width: 1024px) {
         .container {
@@ -61,29 +67,73 @@
             grid-template-columns: repeat(1, 1fr);
         }
     }
-
-    .image {
-        background-image: url("placeholder-image.png");
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
 </style>
 
 <body>
     <h1>Gallery Heading</h1>
     <div class="container">
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
-        <div>Image Title</div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
+        <div>
+            <div class="image"></div>
+            <div class="bottom">
+                Image Title
+            </div>
+        </div>
     </div>
-    <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo nemo quas ad sapiente accusamus quos natus totam
+    <div class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo nemo quas ad sapiente accusamus quos natus totam
         animi dolorem odio odit hic voluptatibus dolores ducimus, architecto doloribus exercitationem ex distinctio.
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo nemo quas ad sapiente accusamus quos natus totam
         animi dolorem odio odit hic voluptatibus dolores ducimus, architecto doloribus exercitationem ex distinctio.
